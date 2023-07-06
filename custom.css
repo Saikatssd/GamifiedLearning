@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-first {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://i.pinimg.com/originals/80/87/5c/80875c0616a395ae9ee94ab1e585c416.gif");
+    background-position: 0px 0px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 1;
+}
+
+h1 {
+    line-height: 3rem;
+    font-size: xxx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(255, 0, 242);
+
+}
+
+a .btn-first {
+    margin-top: 30px;
+    width: 322px;
+    height: 10vh;
+    font-size: xx-large;
+    font-family: Verdana;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgb(21, 21, 102);
+    color: bisque;
+    transition: 0.3s ease-in-out;
+}
+
+a .btn-first:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 5px 0 white;
+    cursor: pointer;
+}
+
+/*signup*/
+.container-second {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://media.tenor.com/2jkQboGOGcMAAAAM/trippy-ombre.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    border: none;
+    border-radius: 8px;
+    background-image: url("https://cdn.pixabay.com/animation/2023/04/01/22/46/22-46-10-369_256.gif");
+    width: 512px;
+    height: 69vh
+}
+
+.main input {
+    width: 401px;
+    height: 9vh;
+    border: none;
+    border-radius: 8px;
+    margin-top: 47px;
+    text-align: center;
+    font-size: larger;
+}
+
+a button{
+    border: none;
+    margin-top: 47px;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 8vh;
+    border-radius: 8px;
+    font-size: larger;
+}
+.container-third{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+}
+.main1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
