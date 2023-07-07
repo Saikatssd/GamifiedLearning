@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
 }
 
 .container-first {
@@ -80,7 +82,7 @@ a .btn-first:hover {
     font-size: larger;
 }
 
-a button{
+a button {
     border: none;
     margin-top: 47px;
     margin-bottom: 30px;
@@ -89,17 +91,106 @@ a button{
     border-radius: 8px;
     font-size: larger;
 }
-.container-third{
+
+.container-third {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     height: 100vh;
-
+    font-family: Verdana;
+    background-image: linear-gradient(rgba(244, 230, 10), rgb(255, 36, 168))
 }
-.main1{
+
+.main-third {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.main-third a img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+
+}
+
+.study-container {
+    background-image: linear-gradient(rgb(18, 18, 14), rgb(157, 166, 58));
+
+    width: 100%;
+    height: 100vh
+}
+
+.navbar {
+    width: 100%;
+    height: 15vh;
+    background: rgba(23, 23, 114, 0.5);
+    box-shadow: 5px 5px 5px grey;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar ul li {
+    display: inline;
+    list-style-type: none;
+    color: white;
+    margin-right: 40px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: cyan;
+    text-decoration: underline;
+
+}
+
+.sidebar {
+
+    background: white;
+    width: 12%;
+    height: calc(100% - 15vh);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sidebar-container {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.sidebar li {
+    /* margin: 1.5rem;    */
+    padding: 1.5rem;
+    border-bottom: 2px solid black;
+    box-shadow: 0 3px 1px grey;
+
+}
+
+.inner1,.inner2,.inner3,.inner4 {
+    position: absolute;
+    left: 192px;
+    top: 110px;
+    background-color: aqua;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.inner-toggle {
+    max-height: 470px;
 }
