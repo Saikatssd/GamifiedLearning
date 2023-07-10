@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Poppins:wght@200&family=Press+Start+2P&family=Righteous&family=Special+Elite&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.display {
+    background: black;
+    text-align: center;
+}
+
+.hacker {
+    display: flex;
+}
+
+.bg1 {
+    background-image: url("https://assets.website-files.com/5daaade3e3e3f04da71daa8e/61b1b0e4d89b74a2fd96b7b4_Pacman.gif");
+    height: 500px;
+    width: 50%;
+}
+
+.bg2 {
+    background-image: url("https://cdn.myportfolio.com/2fcfcb103788251450a8304378dffded/a62c047f-8369-493c-ab14-71ef51bebc55_rw_1200.gif?h=e8c7ce55b326319eaca316cc1e74518f");
+    height: 370px;
+    width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.info{
+    margin-top: -90px;
+}
+
+.info h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+}
+
+.info h2, h3 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.info p {
+    font-family: 'Rubik Pixels', cursive;
+    font-size: 1.8rem;
+}
+
+
+.info img {
+    width: 48px;
+    height: 48px;
+}
+
+.info h1,
+p {
+    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+a .btn-first {
+    margin: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    font-family: Verdana;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a .btn-first:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+a .btn-first:active {
+    transform: scale(0.95);
+}
+
+@media screen and (min-device-width: 480px) and (max-device-width: 1024px) {
+    .display {
+        width: 100%;
+    }
+
+    .bg1,
+    .bg2 {
+        height: 300px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .display {
+        width: 100%;
+    }
+
+    .hacker {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .bg1 {
+        transform: rotateY('45deg');
+    }
+
+}

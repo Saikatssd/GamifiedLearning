@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact us</title>
+	<link rel="stylesheet" type="text/css" href="contact.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+                <form action="/contact" method="post">
+				<h2>Contact Us</h2>
+				<input type="text" class="field" placeholder="Your Name" name="name" value="<%=locals.name%>"  >
+				<input type="email" class="field" placeholder="Your Email" name="email" value="<%=locals.email%>"  >
+				<input type="number" class="field" placeholder="Phone Number"name="phone" value="<%=locals.phone%>" >
+				<textarea placeholder="Message" class="field" value="<%=locals.messsage%>" name="message"></textarea>
+				<button class="btn" type="submit">Send</button>
+            </form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

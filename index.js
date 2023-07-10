@@ -16,9 +16,12 @@ const userSchema = new mongoose.Schema({
     name: String,
     email: String,
     password: String,
+
 });
 
 const User = mongoose.model("User", userSchema);
+
+
 
 const app = express();
 
@@ -44,13 +47,11 @@ const isAuthenticated = async (req, res, next) => {
     }
 };
 
-app.route("/").get((req,res)=>{
-    res.sendFile(path.join(__dirname, "page/contact.html"));
+app.route("/").get((req, res) => {
+    //console.log(readFileSync(path.join(__dirname, "views/index.html")));
+    res.sendFile("index.html");
 })
 
-// app.route("/contact").get(function (req, res) {
-//   res.sendFile(path.join(__dirname, "page/contact.html"));
-// });
 
 app.get("/user", isAuthenticated, (req, res) => {
     res.render("logout", { name: req.user.name });
@@ -65,7 +66,7 @@ app.get("/register", (req, res) => {
 });
 
 app.post("/login", async (req, res) => {
-    const { email, password } = req.body;
+    const { email, password} = req.body;
 
     let user = await User.findOne({ email });
 
@@ -82,11 +83,12 @@ app.post("/login", async (req, res) => {
         httpOnly: true,
         expires: new Date(Date.now() + 60 * 1000),
     });
+
     res.redirect("/user");
 });
 
 app.post("/register", async (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password} = req.body;
 
     let user = await User.findOne({ email });
     if (user) {
@@ -98,9 +100,13 @@ app.post("/register", async (req, res) => {
         name,
         email,
         password: hashedPassword,
+
     });
 
     const token = jwt.sign({ _id: user._id }, "sdjasdbajsdbjasd");
+
+    // user.coins = 'King in the Nort';
+    // await coins.save();
 
     res.cookie("token", token, {
         httpOnly: true,
@@ -115,8 +121,68 @@ app.get("/logout", (req, res) => {
         httpOnly: true,
         expires: new Date(Date.now()),
     });
-    res.redirect("/user");
+    res.render("/user");
 });
+
+app.get("/study", async (req, res) => {
+    res.render("study");
+
+});
+
+app.get("/play", (req, res) => {
+    res.render("play");
+});
+
+app.get("/current_affairs", (req, res) => {
+    res.render("currentAffairs");
+});
+
+app.get("/colorguess", (req, res) => {
+    res.render("colorguess");
+});
+app.get("/about", (req, res) => {
+    res.render("about");
+});
+
+
+///Contact code
+
+const messageSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    phone: Number,
+    message: String,
+});
+
+const Message = mongoose.model("Message", messageSchema);
+
+
+app.get("/contact", (req, res) => {
+    res.render("contact");
+});
+
+
+app.post("/contact", async (req, res) => {
+    const { name, email, phone, message } = req.body;
+
+    if (!name || !email || !phone || !message) {
+        console.log("Error in contact form ");
+        return res.json({ error: "plzz fill the contact form " });
+    }
+    else {
+        await Message.create({
+            name,
+            email,
+            phone,
+            message,
+        });
+        res.send("Message Sent Successfully 🙏.");
+
+    }
+
+});
+
+
 
 app.listen(5000, () => {
     console.log("Server is working");

@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background: url(https://t4.ftcdn.net/jpg/04/42/37/53/240_F_442375349_Z2mv3ZZNkKgsDgY1FOCdHeo8KXDop3iy.jpg);
+}
+
+#header {
+    position: fixed;
+    left: -30rem;
+    top: 0;
+
+}
+
+.navbar {
+    float: left;
+    border: .2rem solid blue;
+    height: 100vh;
+    width: 17rem;
+    background-color: rgba(0, 0, 0, 0.486);
+    backdrop-filter: blur(.4rem);
+    box-shadow: 0 .8rem 3.2rem 0 rgba(0, 0, 0, 0.37);
+    border: .1rem solid rgba(255, 255, 255, 0.18);
+    transition: .9s ease-in-out;
+    padding-top: 30px;
+}
+
+.menu{
+    margin-top: 40px;
+}
+.menu li{
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+.menu li button{
+    margin-left: 30px;
+}
+
+
+.user {
+    color: white;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar h2 {
+    margin: 20px 1px;
+    text-align: center;
+    font-size: 1.8rem;
+    color: rgb(231, 229, 229);
+}
+
+
+.mobile-nav-toggle {
+    padding: 5px 8px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    transition: .9s ease-in-out;
+    color: white;
+}
+
+.dashbar-header {
+    color: white;
+
+    position: sticky;
+}
+
+.logout-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(225, 223, 223);
+    box-shadow: 2px 5px 2px rgb(199, 197, 197);
+}
+
+h1 {
+    padding: 1.5rem;
+}
+
+.submit-btn {
+    padding: 8px 15px;
+    margin-right: 2rem;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    width: 100%;
+    height: 100vh;
+    font-family: Verdana;
+}
+
+.img-descrip {
+    font-size: large;
+}
+
+.img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.img-box a img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10px;
+
+}
